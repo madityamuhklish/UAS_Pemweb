@@ -1,0 +1,302 @@
+/* ===========================
+   Dashboard Layout
+=========================== */
+
+.main-content{
+    min-height:100vh;
+    background:#f8fafc;
+}
+
+
+.title{
+
+    font-size:var(--fs-h1, 32px);
+    font-weight:700;
+    color:#1e293b;
+
+}
+
+
+.subtitle{
+
+    color:#64748b;
+    font-size:var(--fs-body, 16px);
+
+}
+
+
+/* ===========================
+   Dashboard Card
+=========================== */
+
+
+.dashboard-card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+
+}
+
+
+
+.dashboard-card h6{
+
+    color:#64748B;
+
+    margin-bottom:10px;
+
+    font-size:14px;
+
+}
+
+
+
+.dashboard-card h2{
+
+    font-weight:700;
+
+    color:#1e293b;
+
+}
+
+
+
+.dashboard-card .icon{
+
+    font-size:45px;
+
+    color:#6366F1;
+
+}
+
+
+
+/* ===========================
+   Card Decoration
+=========================== */
+
+
+.dashboard-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+
+    height:80px;
+
+    background:#6366f1;
+
+    opacity:.08;
+
+    border-radius:50%;
+
+    right:-20px;
+
+    bottom:-20px;
+
+}
+
+
+
+/* ===========================
+   Table Card
+=========================== */
+
+
+.card{
+
+    border-radius:20px;
+
+}
+
+
+
+.card-header{
+
+    border-bottom:1px solid #e2e8f0;
+
+    padding:18px 20px;
+
+}
+
+
+
+.card-header h5{
+
+    font-weight:600;
+
+    color:#1e293b;
+
+}
+
+
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+
+
+.table th{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+
+
+/* ===========================
+   Badge Status
+=========================== */
+
+
+.badge{
+
+    padding:8px 12px;
+
+    border-radius:10px;
+
+    font-size:12px;
+
+}
+
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+
+@media(max-width:768px){
+
+    .title{
+
+        font-size:26px;
+
+    }
+
+
+    .dashboard-card{
+
+        padding:20px;
+
+    }
+
+
+    .dashboard-card .icon{
+
+        font-size:35px;
+
+    }
+
+}
+/* ===========================
+   Dashboard Card Colors
+=========================== */
+
+
+.card-subscription .icon{
+
+    color:#6366f1;
+
+}
+
+
+.card-spending .icon{
+
+    color:#10b981;
+
+}
+
+
+.card-reminder .icon{
+
+    color:#f59e0b;
+
+}
+
+
+.card-wishlist .icon{
+
+    color:#ec4899;
+
+}
+
+
+
+/* Hover Border */
+
+.card-subscription:hover{
+
+    border-left:5px solid #6366f1;
+
+}
+
+
+.card-spending:hover{
+
+    border-left:5px solid #10b981;
+
+}
+
+
+.card-reminder:hover{
+
+    border-left:5px solid #f59e0b;
+
+}
+
+
+.card-wishlist:hover{
+
+    border-left:5px solid #ec4899;
+
+}
+.dashboard-card{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-5px);
+}
