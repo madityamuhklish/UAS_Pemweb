@@ -1,0 +1,80 @@
+/* =====================================================================
+   SubsPilot — Shared Auth Page Styles (login, register)
+   Uses the SAME design tokens as the rest of the app (dashboard.css
+   :root) so colors/typography stay consistent instead of living in
+   separate inline <style> blocks per page.
+===================================================================== */
+
+*{ font-family:'Inter', sans-serif; }
+
+body.auth-body{
+    background:linear-gradient(180deg,var(--background,#F8FAFC) 0%,#F1F1FB 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Animated themed silhouette background */
+.auth-silhouette{
+    position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none;
+}
+.auth-silhouette i{
+    position:absolute;
+    color:var(--primary, #6366F1);
+    opacity:.07;
+    animation:authFloat ease-in-out infinite;
+}
+.auth-silhouette .a1{ top:8%;  left:6%;   font-size:150px; animation-duration:10s; }
+.auth-silhouette .a2{ top:60%; left:10%;  font-size:110px; animation-duration:8s; animation-delay:.4s; }
+.auth-silhouette .a3{ top:12%; right:8%;  font-size:190px; animation-duration:12s; animation-delay:.7s; }
+.auth-silhouette .a4{ top:68%; right:12%; font-size:130px; animation-duration:9s; animation-delay:1s; }
+.auth-silhouette .a5{ top:38%; left:46%;  font-size:90px;  animation-duration:11s; animation-delay:.6s; opacity:.045; }
+.auth-silhouette .a6{ bottom:4%; left:32%;font-size:120px; animation-duration:9.5s; animation-delay:1.3s; }
+
+@keyframes authFloat{
+    0%,100%{ transform:translate(0,0) rotate(0deg); }
+    50%{ transform:translate(22px,-30px) rotate(8deg); }
+}
+
+.auth-card{
+    position:relative;
+    z-index:2;
+    width:420px;
+    border:none;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    background:var(--white,#fff);
+}
+
+.auth-logo{
+    color:var(--primary, #6366F1);
+    font-size:50px;
+}
+
+.auth-card .btn-primary{
+    background:var(--primary, #6366F1);
+    border:none;
+}
+.auth-card .btn-primary:hover{
+    background:#4F46E5;
+}
+
+/* Optional dark mode support, kept consistent with the rest of the app */
+body.auth-body.dark-mode{
+    background:linear-gradient(180deg,#0F172A 0%,#1E293B 100%);
+}
+body.auth-body.dark-mode .auth-card{
+    background:#1E293B;
+    color:#E2E8F0;
+}
+body.auth-body.dark-mode .auth-card label{
+    color:#94A3B8;
+}
+body.auth-body.dark-mode .form-control{
+    background:#0F172A;
+    border-color:#334155;
+    color:#E2E8F0;
+}
